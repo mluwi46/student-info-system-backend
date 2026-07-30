@@ -1,5 +1,4 @@
 from fastapi import FastAPI
-from typing import List
 
 app = FastAPI()
 
@@ -12,6 +11,6 @@ students = [
 def home():
     return {"message": "Welcome to Student Info API"}
 
-@app.get("/students", response_model=List[dict])
+@app.get("/students")
 def get_students():
     return students

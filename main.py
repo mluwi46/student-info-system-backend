@@ -13,4 +13,4 @@ def home():
 
 @app.get("/students")
 def get_students():
-    return students
+    return {"students": students}
